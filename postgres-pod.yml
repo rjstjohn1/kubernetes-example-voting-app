@@ -9,5 +9,12 @@ spec:
   containers:
   - name: postgres
     image: postgres:9.4
+    env:
+    - name: POSTGRES_USER
+      value: gitlab
+    - name: POSTGRES_DB
+      value: gitlabhq_production
+    - name: POSTGRES_PASSWORD
+      value: gitlab
     ports:
     - containerPort: 5432
